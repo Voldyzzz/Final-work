@@ -1,0 +1,44 @@
+// Colors
+$color-black: #000000;
+$color-white: #ffffff;
+
+// main colors
+$color-main-regular: #323264;
+$color-main-alt: #46466e;
+$color-main-soft: #686887;
+
+// accent
+$color-accent: #f0145a;
+
+// active
+$color-active-regular: #24a3ff;
+$color-active-hov: #0085ff;
+$color-active-act: #006ccf;
+
+// grey
+$color-grey-bg: #f5f5fa;
+$color-grey-bg-alt: #ededf7;
+$color-grey-text: #b3b3ba;
+$color-grey-separator: #e6e6f0;
+
+// gradient
+$color-gradient-regular: linear-gradient(
+  135deg,
+  #323264 0%,
+  #323264 73.96%,
+  #a54b5f 100%
+);
+$color-gradient-soft: linear-gradient(
+  23deg,
+  #323264 0%,
+  #323264 50.63%,
+  #7a425e 100%
+);
+$color-gradient-red: linear-gradient(310deg, #f0145a 0%, #693264 100%);
+$color-gradient-supersoft: linear-gradient(
+  208deg,
+  #323264 0%,
+  #323264 59.9%,
+  #643e72 100%
+);
+$color-gradient-redText: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
