@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -142,6 +154,7 @@ table {
 }
 
 html {
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 26px;
 }
@@ -158,6 +171,16 @@ body {
 ::selection {
   background: #323264;
   color: #ffffff;
+}
+
+.main {
+  background: linear-gradient(208deg, #323264 0%, #323264 59.9%, #643e72 100%);
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 160px;
 }
 
 .heading-hero {
@@ -197,4 +220,35 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
+}
+
+.header {
+  padding-top: 50px;
+}
+.header__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header__inner__block__name {
+  display: block;
+  width: 130px;
+  height: 46px;
+  margin-bottom: 6px;
+}
+.header__inner__block__law-company {
+  width: 130px;
+  height: 7px;
+}
+.header__inner__block-2 {
+  display: flex;
+  flex-direction: column;
+}
+.header__inner__block-2__wrap {
+  display: flex;
+  margin-bottom: 16px;
+}
+.header__inner__block-2__wrap:last-child {
+  margin-bottom: 0;
+  padding-left: 62px;
 }/*# sourceMappingURL=main.css.map */

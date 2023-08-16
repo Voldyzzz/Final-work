@@ -1,0 +1,36 @@
+.header {
+  padding-top: 50px;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__block__name {
+      display: block;
+      width: 130px;
+      height: 46px;
+      margin-bottom: 6px;
+    }
+
+    &__block__law-company {
+      width: 130px;
+      height: 7px;
+    }
+
+    &__block-2 {
+      display: flex;
+      flex-direction: column;
+
+      &__wrap {
+        display: flex;
+        margin-bottom: 16px;
+      }
+
+      &__wrap:last-child {
+        margin-bottom: 0;
+        padding-left: 62px;
+      }
+    }
+  }
+}
