@@ -14,3 +14,15 @@
 
 @include font-face("Montserrat", "Montserrat-Regular", 400);
 @include font-face("Montserrat", "Montserrat-Bold", 700);
+
+@mixin circle-element {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: $color-grey-separator;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
