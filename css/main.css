@@ -225,11 +225,11 @@ body {
 
 .header {
   padding-top: 50px;
+  position: relative;
+  z-index: 1;
 }
 .header__inner {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 .header__inner__block__name {
   display: block;
@@ -244,6 +244,7 @@ body {
 .header__inner__block-2 {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
 }
 .header__inner__block-2__wrap {
   display: flex;
@@ -304,21 +305,96 @@ body {
   transform: translateY(-50%);
   left: calc(100% + 6px);
 }
-.header__inner__block-2__wrap__text-menu {
+.header__inner__block-2__wrap__link-menu {
   color: #ffffff;
   margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
-.header__inner__block-2__wrap__text-menu:last-child {
+.header__inner__block-2__wrap__link-menu:hover {
+  color: #f0145a;
+}
+.header__inner__block-2__wrap__link-menu:last-child {
   margin-right: 0;
 }
 .header__inner__block-2__wrap:last-child {
   margin: 0 0 0 auto;
 }
 
+.hero {
+  position: relative;
+  bottom: 116px;
+}
 .hero__inner {
   text-align: center;
-  background-image: url(../../images/Symbol.png);
-  background-repeat: no-repeat;
+}
+.hero__inner__symbol {
   width: 872px;
   height: 1000px;
+}
+.hero__inner__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero__inner .icon-scroll {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+}
+.hero__inner .icon-scroll svg {
+  stroke: #ffffff;
+  transition: all 0.3s ease;
+}
+.hero__inner .icon-scroll:hover svg {
+  stroke: #f0145a;
+}
+
+.experience__inner {
+  padding: 0 120px 60px;
+  display: flex;
+  flex-direction: row;
+}
+.experience__inner__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.experience__inner__wrapper:first-child {
+  align-items: flex-end;
+  max-width: 440px;
+  width: 100%;
+  border-right: 4px solid rgba(255, 255, 255, 0.3);
+}
+.experience__inner__wrapper__item {
+  color: #b3b3ba;
+  margin: 0 60px 30px 0;
+}
+.experience__inner__wrapper__item:last-child {
+  margin-bottom: 0;
+}
+.experience__inner__wrapper__item:hover {
+  cursor: pointer;
+  color: #f0145a;
+}
+.experience__inner__wrapper__item.active {
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.experience__inner__wrapper:last-child {
+  justify-content: center;
+  margin-left: 60px;
+}
+.experience__inner__wrapper__title {
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.experience__inner__wrapper__text {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 30px;
 }/*# sourceMappingURL=main.css.map */

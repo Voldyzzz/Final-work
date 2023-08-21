@@ -1,10 +1,38 @@
 .hero {
+  position: relative;
+  bottom: 116px;
+
   &__inner {
     text-align: center;
-    background-image: url(../../images/Symbol.png);
-    background-repeat: no-repeat;
 
-    width: 872px;
-    height: 1000px;
+    &__symbol {
+      width: 872px;
+      height: 1000px;
+    }
+
+    &__title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .icon-scroll {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+
+      svg {
+        stroke: $color-white;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        svg {
+          stroke: $color-accent;
+        }
+      }
+    }
   }
 }
