@@ -69,6 +69,10 @@
           text-decoration: none;
           position: relative;
 
+          &:hover {
+            color: $color-accent;
+          }
+
           &::after {
             @include circle-element;
             left: calc(100% + 6px);

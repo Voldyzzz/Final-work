@@ -1,0 +1,46 @@
+.team {
+  padding: 60px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    &__img {
+      width: 400px;
+      align-self: stretch;
+    }
+
+    &__block {
+      padding: 30px;
+
+      &__link {
+        margin-bottom: 5px;
+        color: $color-active-regular;
+      }
+
+      &__text {
+        background: $color-gradient-redText;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 30px;
+      }
+
+      &__author {
+        color: $color-grey-text;
+        margin-bottom: 6px;
+      }
+
+      &__position {
+        color: $color-grey-text;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+
+    &__selector {
+    }
+  }
+}
