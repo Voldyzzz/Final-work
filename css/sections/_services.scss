@@ -1,6 +1,8 @@
 .services {
-  border-radius: 0px 0px 12px 12px;
   background: $color-gradient-supersoft;
+  border-radius: 0px 0px 12px 12px;
+  overflow: hidden;
+
   &__inner {
     &__link {
       color: $color-active-regular;
@@ -63,5 +65,15 @@
         }
       }
     }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: red;
+    position: absolute;
+    bottom: -10px;
   }
 }

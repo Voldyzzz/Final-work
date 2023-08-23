@@ -2,45 +2,76 @@
   padding: 60px 0;
 
   &__inner {
-    display: flex;
-    align-items: center;
+    &__wrapper {
+      display: flex;
 
-    &__img {
-      width: 400px;
-      align-self: stretch;
+      &__img {
+        width: 400px;
+        align-self: stretch;
+      }
+
+      &__block {
+        padding: 30px;
+
+        &__link {
+          margin-bottom: 5px;
+          color: $color-active-regular;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-accent;
+            svg {
+              path {
+                stroke: $color-accent;
+              }
+            }
+          }
+        }
+
+        &__text {
+          background: $color-gradient-redText;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 30px;
+        }
+
+        &__author {
+          color: $color-grey-text;
+          margin-bottom: 6px;
+        }
+
+        &__position {
+          color: $color-grey-text;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 22px;
+        }
+      }
     }
 
-    &__block {
-      padding: 30px;
+    &__selector-wrapper {
+      text-align: center;
 
-      &__link {
-        margin-bottom: 5px;
-        color: $color-active-regular;
+      &__selector {
+        margin-top: 30px;
+        margin-right: 15px;
+        border: none;
+        background: none;
+
+        &:hover {
+          svg {
+            circle {
+              fill: $color-accent;
+              opacity: 1;
+            }
+          }
+        }
+
+        &:last-child {
+          margin-right: 0px;
+        }
       }
-
-      &__text {
-        background: $color-gradient-redText;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 30px;
-      }
-
-      &__author {
-        color: $color-grey-text;
-        margin-bottom: 6px;
-      }
-
-      &__position {
-        color: $color-grey-text;
-        font-family: Montserrat;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 22px;
-      }
-    }
-
-    &__selector {
     }
   }
 }
