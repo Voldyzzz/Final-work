@@ -1,5 +1,5 @@
 .team {
-  padding: 60px 0;
+  padding: 80px 0 60px;
 
   &__inner {
     &__wrapper {
@@ -11,6 +11,7 @@
       }
 
       &__block {
+        background-color: $color-grey-bg;
         padding: 30px;
 
         &__link {
@@ -58,6 +59,12 @@
         margin-right: 15px;
         border: none;
         background: none;
+
+        svg {
+          circle {
+            transition: all 0.3s ease;
+          }
+        }
 
         &:hover {
           svg {

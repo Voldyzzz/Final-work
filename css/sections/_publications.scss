@@ -1,3 +1,70 @@
 .publications {
-  padding: 15px 0 60px;
+  padding: 30px 0 30px;
+
+  &__inner {
+    &__link {
+      color: $color-active-regular;
+      text-decoration: none;
+      margin-bottom: 10px;
+
+      &:hover {
+        color: $color-accent;
+
+        svg {
+          path {
+            stroke: $color-accent;
+          }
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 30px;
+      background: $color-gradient-redText;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__wrapper {
+      display: flex;
+
+      &__card {
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        &__info {
+          display: flex;
+          flex-direction: column;
+          padding: 30px;
+
+          &__title {
+            color: $color-active-regular;
+            margin-bottom: 15px;
+          }
+
+          &__data {
+            color: $color-grey-text;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding-bottom: 15px;
+            border-bottom: 4px solid $color-grey-separator;
+          }
+
+          &__text {
+            margin-top: 15px;
+            color: $color-black;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
 }

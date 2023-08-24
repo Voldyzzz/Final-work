@@ -1,7 +1,7 @@
 .services {
   background: $color-gradient-supersoft;
   border-radius: 0px 0px 12px 12px;
-  overflow: hidden;
+  position: relative;
 
   &__inner {
     &__link {
@@ -66,7 +66,7 @@
       }
     }
   }
-
+  &::before,
   &::after {
     content: "";
     display: block;
@@ -74,6 +74,21 @@
     height: 10px;
     background: red;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px 0px 12px 12px;
+  }
+
+  &::before {
+    width: calc(100% - 40px);
+    // background: #cacadb;
+    background: #cacadb;
     bottom: -10px;
+  }
+
+  &::after {
+    width: calc(100% - 80px);
+    background: #e7e7f2;
+    bottom: -20px;
   }
 }

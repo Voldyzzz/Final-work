@@ -1,0 +1,106 @@
+.footer {
+  padding: 30px 0;
+
+  &__inner {
+    display: flex;
+    padding-top: 30px;
+    border-top: 2px solid $color-grey-separator;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      max-width: 400px;
+      width: 100%;
+
+      &__block-address {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 20px;
+
+        &__location {
+          color: $color-main-regular;
+          margin-right: 26px;
+          position: relative;
+
+          &::after {
+            @include circle-element;
+            background: $color-grey-text;
+            left: calc(100% + 10px);
+          }
+        }
+
+        &__map-link {
+          color: $color-active-regular;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $color-accent;
+          }
+        }
+      }
+
+      &__block-contact {
+        display: flex;
+        align-items: center;
+
+        &__link {
+          svg {
+            path {
+              transition: fill 0.3s ease;
+            }
+          }
+
+          &:hover {
+            svg {
+              path {
+                fill: $color-accent;
+              }
+            }
+          }
+        }
+
+        &__tel {
+          margin: 0 26px;
+          color: $color-main-alt;
+          text-decoration: none;
+          position: relative;
+
+          &::before,
+          &::after {
+            @include circle-element;
+            background: $color-grey-text;
+          }
+
+          &::before {
+            right: calc(100% + 10px);
+          }
+
+          &::after {
+            left: calc(100% + 10px);
+          }
+        }
+
+        &__email {
+          color: $color-active-regular;
+          text-decoration: none;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: $color-accent;
+          }
+        }
+      }
+    }
+
+    &__block-copyright {
+      color: $color-grey-text;
+      margin-left: auto;
+    }
+  }
+}
