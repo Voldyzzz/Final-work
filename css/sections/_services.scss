@@ -1,4 +1,7 @@
 .services {
+  @media screen and (max-width: 1920px) {
+    display: none;
+  }
   background: $color-gradient-supersoft;
   border-radius: 0px 0px 12px 12px;
   position: relative;

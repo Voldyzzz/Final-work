@@ -1,4 +1,7 @@
 .companies {
+  @media screen and (max-width: 1920px) {
+    display: none;
+  }
   padding-bottom: 60px;
 
   .container {

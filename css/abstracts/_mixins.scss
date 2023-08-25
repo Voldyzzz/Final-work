@@ -26,3 +26,53 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+@mixin respond($breadpoint) {
+  @if $breadpoint == 1920px {
+    @media screen and (max-width: 1920px) {
+      @content;
+    }
+  }
+
+  @if $breadpoint == 1440px {
+    @media screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+
+  @if $breadpoint == 1024px {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breadpoint == 768px {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breadpoint == 760px {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breadpoint == 610px {
+    @media screen and (max-width: 610px) {
+      @content;
+    }
+  }
+
+  @if $breadpoint == 450px {
+    @media screen and (max-width: 450px) {
+      @content;
+    }
+  }
+
+  @if $breadpoint == 375px {
+    @media screen and (max-width: 375px) {
+      @content;
+    }
+  }
+}

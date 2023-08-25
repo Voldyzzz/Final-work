@@ -1,4 +1,14 @@
 .header {
+  // @media screen and (max-width: 1920px) {
+  //   display: none;
+  // }
+
+  .container {
+    @include respond(610px) {
+      padding: 0 15px;
+    }
+  }
+
   padding-top: 50px;
   position: relative;
   z-index: 1;
@@ -6,16 +16,58 @@
   &__inner {
     display: flex;
 
+    @include respond(768px) {
+      flex-direction: column;
+    }
+
+    &__block {
+      @include respond(768px) {
+        margin: 58px 0 30px;
+      }
+
+      @include respond(450px) {
+        display: flex;
+        align-items: center;
+      }
+
+      .hamburger-menu-block {
+        margin-left: auto;
+
+        .hamburger-menu {
+          width: 32px;
+          height: 32px;
+          border: none;
+          background: none;
+          display: none;
+
+          @include respond(450px) {
+            display: block;
+          }
+        }
+      }
+    }
+
     &__block__name {
       display: block;
       width: 130px;
       height: 46px;
       margin-bottom: 6px;
+
+      @include respond(450px) {
+        width: 70px;
+        height: 32px;
+        margin-bottom: 2px;
+      }
     }
 
     &__block__law-company {
       width: 130px;
       height: 7px;
+
+      @include respond(450px) {
+        width: 70px;
+        height: 4px;
+      }
     }
 
     &__block-2 {
@@ -23,10 +75,20 @@
       flex-direction: column;
       margin-left: auto;
 
+      @include respond(768px) {
+        margin-left: 0;
+      }
+
       &__wrap {
         display: flex;
         align-items: center;
         margin-bottom: 16px;
+
+        @include respond(768px) {
+          position: relative;
+          margin-bottom: 0;
+          top: -155px;
+        }
 
         &__block-languages__btn-language {
           padding: 5px 7px;
@@ -61,6 +123,10 @@
           &::after {
             left: calc(100% + 6px);
           }
+
+          @include respond(610px) {
+            display: none;
+          }
         }
 
         &__tel {
@@ -70,6 +136,11 @@
           position: relative;
           transition: color 0.3s ease;
 
+          @include respond(610px) {
+            margin-right: 0;
+            margin-left: auto;
+          }
+
           &:hover {
             color: $color-accent;
           }
@@ -77,10 +148,17 @@
           &::after {
             @include circle-element;
             left: calc(100% + 6px);
+
+            @include respond(610px) {
+              display: none;
+            }
           }
         }
 
         &__facebook-link {
+          @include respond(610px) {
+            display: none;
+          }
           svg {
             path {
               transition: fill 0.3s ease;
@@ -110,8 +188,18 @@
             margin-right: 0;
           }
         }
+
         &:last-child {
           margin: 0 0 0 auto;
+
+          @include respond(768px) {
+            margin-left: 0;
+            top: -25px;
+          }
+
+          @include respond(450px) {
+            display: none;
+          }
         }
       }
     }

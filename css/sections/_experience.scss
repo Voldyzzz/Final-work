@@ -1,4 +1,7 @@
 .experience__inner {
+  @media screen and (max-width: 1920px) {
+    display: none;
+  }
   padding: 0 120px 60px;
   display: flex;
   flex-direction: row;

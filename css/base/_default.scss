@@ -30,4 +30,8 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 160px;
+
+  @include respond(1440px) {
+    padding: 0 60px;
+  }
 }
