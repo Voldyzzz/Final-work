@@ -1,14 +1,14 @@
 .hero {
-  // @media screen and (max-width: 1920px) {
-  //   display: none;
-  // }
-
   position: relative;
   bottom: 116px;
   overflow: hidden;
 
   @include respond(768px) {
     top: -250px;
+  }
+
+  @include respond(620px) {
+    bottom: 86px;
   }
 
   &__inner {
@@ -35,8 +35,20 @@
         left: -126px;
       }
 
-      @include respond(610px) {
+      @include respond(620px) {
         width: calc(894px - 33%);
+        height: calc(1024px - 33%);
+      }
+
+      @include respond(460px) {
+        width: calc(894px - 66%);
+        height: calc(1024px - 66%);
+      }
+
+      @include respond(375px) {
+        width: 524px;
+        height: 600px;
+        left: -76px;
       }
     }
 
@@ -54,6 +66,12 @@
         max-width: 315px;
         left: calc(50% + 30px);
         top: calc(50% - 15px);
+      }
+
+      @include respond(375px) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
 

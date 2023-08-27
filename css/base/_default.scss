@@ -34,4 +34,8 @@ body {
   @include respond(1440px) {
     padding: 0 60px;
   }
+
+  @include respond(375px) {
+    padding: 0 30px;
+  }
 }

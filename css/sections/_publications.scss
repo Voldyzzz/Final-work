@@ -1,8 +1,9 @@
 .publications {
-  @media screen and (max-width: 1920px) {
-    display: none;
-  }
   padding: 30px 0 30px;
+
+  @include respond(620px) {
+    padding-bottom: 0;
+  }
 
   &__inner {
     &__link {
@@ -27,16 +28,56 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @include respond(620px) {
+        @include hero-mobile;
+      }
     }
 
     &__wrapper {
       display: flex;
 
+      @include respond(1022px) {
+        flex-wrap: wrap;
+      }
+
       &__card {
+        max-width: 514px;
+        width: calc(100% / 3);
         margin-right: 30px;
+
+        @include respond(1022px) {
+          width: calc(50% - 15px);
+          flex-wrap: wrap;
+        }
+
+        @include respond(620px) {
+          margin: 0 0 30px;
+          width: 100%;
+        }
+
+        &:nth-child(2) {
+          @include respond(1022px) {
+            margin-right: 0;
+          }
+        }
 
         &:last-child {
           margin-right: 0px;
+
+          @include respond(1022px) {
+            max-width: none;
+            width: 100%;
+          }
+        }
+
+        &__img {
+          max-width: 514px;
+          width: 100%;
+
+          @include respond(1022px) {
+            max-width: none;
+          }
         }
 
         &__info {
@@ -44,9 +85,10 @@
           flex-direction: column;
           padding: 30px;
 
-          &__title {
+          &__title-link {
             color: $color-active-regular;
             margin-bottom: 15px;
+            text-decoration: none;
           }
 
           &__data {

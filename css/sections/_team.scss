@@ -1,16 +1,23 @@
 .team {
-  @media screen and (max-width: 1920px) {
-    display: none;
-  }
   padding: 80px 0 60px;
+
+  @include respond(460px) {
+    padding-top: 30px;
+  }
 
   &__inner {
     &__wrapper {
       display: flex;
 
+      @include respond(1022px) {
+        flex-direction: column;
+      }
+
       &__img {
         width: 400px;
         align-self: stretch;
+        object-fit: contain;
+        border-radius: 12px 0px 0px 12px;
       }
 
       &__block {
@@ -38,6 +45,10 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           margin-bottom: 30px;
+
+          @include respond(460px) {
+            @include hero-mobile;
+          }
         }
 
         &__author {

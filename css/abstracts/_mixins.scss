@@ -27,6 +27,20 @@
   transform: translateY(-50%);
 }
 
+@mixin hero-mobile {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin h2-mobile {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 @mixin respond($breadpoint) {
   @if $breadpoint == 1920px {
     @media screen and (max-width: 1920px) {
@@ -46,6 +60,12 @@
     }
   }
 
+  @if $breadpoint == 1022px {
+    @media screen and (max-width: 1022px) {
+      @content;
+    }
+  }
+
   @if $breadpoint == 768px {
     @media screen and (max-width: 768px) {
       @content;
@@ -53,19 +73,25 @@
   }
 
   @if $breadpoint == 760px {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 760px) {
       @content;
     }
   }
 
-  @if $breadpoint == 610px {
-    @media screen and (max-width: 610px) {
+  @if $breadpoint == 700px {
+    @media screen and (max-width: 700px) {
       @content;
     }
   }
 
-  @if $breadpoint == 450px {
-    @media screen and (max-width: 450px) {
+  @if $breadpoint == 620px {
+    @media screen and (max-width: 620px) {
+      @content;
+    }
+  }
+
+  @if $breadpoint == 460px {
+    @media screen and (max-width: 460px) {
       @content;
     }
   }

@@ -1,10 +1,6 @@
 .header {
-  // @media screen and (max-width: 1920px) {
-  //   display: none;
-  // }
-
   .container {
-    @include respond(610px) {
+    @include respond(620px) {
       padding: 0 15px;
     }
   }
@@ -25,7 +21,7 @@
         margin: 58px 0 30px;
       }
 
-      @include respond(450px) {
+      @include respond(460px) {
         display: flex;
         align-items: center;
       }
@@ -40,7 +36,7 @@
           background: none;
           display: none;
 
-          @include respond(450px) {
+          @include respond(460px) {
             display: block;
           }
         }
@@ -53,7 +49,7 @@
       height: 46px;
       margin-bottom: 6px;
 
-      @include respond(450px) {
+      @include respond(460px) {
         width: 70px;
         height: 32px;
         margin-bottom: 2px;
@@ -64,7 +60,7 @@
       width: 130px;
       height: 7px;
 
-      @include respond(450px) {
+      @include respond(460px) {
         width: 70px;
         height: 4px;
       }
@@ -124,7 +120,7 @@
             left: calc(100% + 6px);
           }
 
-          @include respond(610px) {
+          @include respond(620px) {
             display: none;
           }
         }
@@ -136,7 +132,7 @@
           position: relative;
           transition: color 0.3s ease;
 
-          @include respond(610px) {
+          @include respond(620px) {
             margin-right: 0;
             margin-left: auto;
           }
@@ -149,14 +145,14 @@
             @include circle-element;
             left: calc(100% + 6px);
 
-            @include respond(610px) {
+            @include respond(620px) {
               display: none;
             }
           }
         }
 
         &__facebook-link {
-          @include respond(610px) {
+          @include respond(620px) {
             display: none;
           }
           svg {
@@ -197,7 +193,7 @@
             top: -25px;
           }
 
-          @include respond(450px) {
+          @include respond(460px) {
             display: none;
           }
         }

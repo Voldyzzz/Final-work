@@ -1,8 +1,9 @@
 .footer {
-  @media screen and (max-width: 1920px) {
-    display: none;
-  }
   padding: 30px 0;
+
+  @include respond(700px) {
+    padding-bottom: 64px;
+  }
 
   &__inner {
     display: flex;
@@ -12,14 +13,18 @@
     &__wrapper {
       display: flex;
       flex-direction: column;
-
-      max-width: 400px;
       width: 100%;
 
       &__block-address {
         display: flex;
         align-items: baseline;
         margin-bottom: 20px;
+
+        @include respond(700px) {
+          flex-direction: column;
+          align-items: center;
+          margin: 0;
+        }
 
         &__location {
           color: $color-main-regular;
@@ -30,6 +35,13 @@
             @include circle-element;
             background: $color-grey-text;
             left: calc(100% + 10px);
+
+            @include respond(700px) {
+              display: none;
+            }
+          }
+          @include respond(700px) {
+            margin: 0 0 10px;
           }
         }
 
@@ -45,12 +57,29 @@
           &:hover {
             color: $color-accent;
           }
+
+          @include respond(700px) {
+            margin-bottom: 22px;
+          }
+        }
+
+        &__copyright {
+          color: $color-grey-text;
+          margin-left: auto;
+
+          @include respond(700px) {
+            display: none;
+          }
         }
       }
 
       &__block-contact {
         display: flex;
         align-items: center;
+
+        @include respond(700px) {
+          flex-direction: column;
+        }
 
         &__link {
           svg {
@@ -66,6 +95,10 @@
               }
             }
           }
+
+          @include respond(700px) {
+            margin-bottom: 10px;
+          }
         }
 
         &__tel {
@@ -78,6 +111,10 @@
           &::after {
             @include circle-element;
             background: $color-grey-text;
+
+            @include respond(700px) {
+              display: none;
+            }
           }
 
           &::before {
@@ -87,9 +124,14 @@
           &::after {
             left: calc(100% + 10px);
           }
+
+          @include respond(700px) {
+            margin: 0 0 10px;
+          }
         }
 
         &__email {
+          position: relative;
           color: $color-active-regular;
           text-decoration: none;
           transition: all 0.3s ease;
@@ -97,13 +139,25 @@
           &:hover {
             color: $color-accent;
           }
+
+          &::after {
+            @include respond(700px) {
+              position: absolute;
+              content: "© 2021 HLEGAL Law company, LLC";
+              display: block;
+              text-decoration: none;
+              color: $color-grey-text;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 26px;
+              white-space: nowrap;
+              top: 36px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
         }
       }
-    }
-
-    &__block-copyright {
-      color: $color-grey-text;
-      margin-left: auto;
     }
   }
 }
