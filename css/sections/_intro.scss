@@ -1,0 +1,60 @@
+.intro {
+  padding: 60px 120px;
+
+  &__inner {
+    display: flex;
+
+    &__introduction {
+      max-width: 942px;
+      width: 100%;
+      margin-right: 30px;
+
+      &__title {
+        background: $color-gradient-redText;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 28px;
+      }
+
+      &__text {
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+    }
+
+    &__advantages {
+      padding-left: 30px;
+      border-left: 4px solid $color-grey-separator;
+
+      &__item {
+        margin-bottom: 40px;
+
+        &__wrapper {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          &__number {
+            font-size: 36px;
+            font-weight: 700;
+            background: $color-gradient-redText;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-left: 8px;
+          }
+        }
+
+        &__sub-text {
+          color: $color-main-regular;
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

@@ -17,6 +17,8 @@
     }
 
     &__block {
+      display: flex;
+
       @include respond(768px) {
         margin: 58px 0 30px;
       }
@@ -24,6 +26,21 @@
       @include respond(460px) {
         display: flex;
         align-items: center;
+      }
+
+      &__page {
+        display: flex;
+
+        &__slash {
+          margin-left: 4px;
+        }
+
+        &__name {
+          margin-left: 4px;
+          color: $color-main-regular;
+          font-size: 36px;
+          font-weight: 400;
+        }
       }
 
       .hamburger-menu-block {
@@ -95,17 +112,26 @@
           font-size: 12px;
           font-weight: 700;
           letter-spacing: 1px;
+
+          &.grey {
+            color: $color-grey-text;
+          }
         }
 
         &__block-languages__btn-language.active {
           border-radius: 8px;
           background: $color-accent;
+          color: $color-white;
         }
 
         &__text-location {
           margin: 0px 18px 0px;
           position: relative;
           color: $color-white;
+
+          &.grey {
+            color: $color-grey-text;
+          }
 
           &::before,
           &::after {
@@ -131,6 +157,10 @@
           text-decoration: none;
           position: relative;
           transition: color 0.3s ease;
+
+          &.grey {
+            color: $color-grey-text;
+          }
 
           @include respond(620px) {
             margin-right: 0;
@@ -175,6 +205,15 @@
           margin-right: 15px;
           text-decoration: none;
           transition: color 0.3s ease;
+
+          &.blue {
+            color: $color-active-regular;
+          }
+
+          &.active {
+            color: $color-accent;
+            border-bottom: 2px solid $color-accent;
+          }
 
           &:hover {
             color: $color-accent;
