@@ -1,25 +1,45 @@
 .information {
   padding: 60px 120px;
 
+  @include respond(1920px) {
+    padding: 60px 0;
+  }
+
+  @include respond(620px) {
+    padding-top: 30px;
+  }
+
   &__inner {
     display: flex;
+
+    @include respond(1022px) {
+      flex-direction: column;
+      justify-content: center;
+    }
 
     &__text {
       max-width: 938px;
       width: 100%;
       margin-right: 60px;
-      font-size: 19px;
-      font-weight: 400;
-      line-height: 30px;
+      @include paragraph-introduction;
+
+      @include respond(1022px) {
+        margin: 0 0 30px;
+      }
     }
 
     &__title {
       max-width: 362px;
       width: 100%;
-      background: $color-gradient-redText;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      @include background-gradient-redText;
+
+      @include respond(1022px) {
+        max-width: 100%;
+      }
+
+      @include respond(620px) {
+        @include hero-mobile;
+      }
     }
   }
 }

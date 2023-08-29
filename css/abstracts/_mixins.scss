@@ -41,6 +41,20 @@
   line-height: normal;
 }
 
+@mixin paragraph-introduction {
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@mixin background-gradient-redText {
+  background: $color-gradient-redText;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @mixin respond($breadpoint) {
   @if $breadpoint == 1920px {
     @media screen and (max-width: 1920px) {

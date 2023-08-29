@@ -25,7 +25,7 @@
 
       @include respond(460px) {
         display: flex;
-        align-items: center;
+        flex-direction: center;
       }
 
       &__page {
@@ -40,6 +40,11 @@
           color: $color-main-regular;
           font-size: 36px;
           font-weight: 400;
+
+          @include respond(620px) {
+            font-size: 20px;
+            font-weight: 400;
+          }
         }
       }
 
@@ -101,6 +106,10 @@
           position: relative;
           margin-bottom: 0;
           top: -155px;
+        }
+
+        @include respond(460px) {
+          display: none;
         }
 
         &__block-languages__btn-language {

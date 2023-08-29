@@ -24,10 +24,7 @@
 
     &__title {
       margin-bottom: 30px;
-      background: $color-gradient-redText;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      @include background-gradient-redText;
 
       @include respond(620px) {
         @include hero-mobile;

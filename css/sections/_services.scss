@@ -29,10 +29,7 @@
     &__title {
       max-width: 1600px;
       width: 100%;
-      background: $color-gradient-redText;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      @include background-gradient-redText;
 
       @include respond(460px) {
         @include hero-mobile;

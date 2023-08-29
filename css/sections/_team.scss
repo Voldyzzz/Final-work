@@ -40,10 +40,7 @@
         }
 
         &__text {
-          background: $color-gradient-redText;
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          @include background-gradient-redText;
           margin-bottom: 30px;
 
           @include respond(460px) {

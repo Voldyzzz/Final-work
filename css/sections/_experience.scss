@@ -76,10 +76,7 @@
       }
 
       &__item.active {
-        background: $color-gradient-redText;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include background-gradient-redText;
       }
 
       &:last-child {
@@ -114,9 +111,7 @@
 
       &__text {
         color: $color-white;
-        font-size: 19px;
-        font-weight: 400;
-        line-height: 30px;
+        @include paragraph-introduction;
       }
     }
   }

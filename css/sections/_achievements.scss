@@ -1,6 +1,10 @@
 .achievements {
   padding: 30px 0;
 
+  @include respond(460px) {
+    padding-bottom: 0;
+  }
+
   &__inner {
     text-align: center;
 
@@ -12,6 +16,43 @@
       display: flex;
       justify-content: space-evenly;
       margin: 30px 0;
+
+      @include respond(620px) {
+      }
+
+      &__item {
+        @media screen and (max-width: 1000px) {
+          height: 40px;
+
+          &:nth-child(1) {
+            width: 54px;
+          }
+
+          &:nth-child(2) {
+            width: 106px;
+
+            @include respond(460px) {
+              display: none;
+            }
+          }
+
+          &:nth-child(3) {
+            width: 130px;
+
+            @media screen and (max-width: 580px) {
+              display: none;
+            }
+          }
+
+          &:nth-child(4) {
+            width: 110px;
+
+            @include respond(620px) {
+              display: none;
+            }
+          }
+        }
+      }
     }
 
     &__selector-block {
@@ -23,6 +64,28 @@
         border: none;
         background: none;
 
+        &:nth-child(n + 4) {
+          display: none;
+        }
+
+        &:nth-child(n + 6) {
+          @include respond(620px) {
+            display: inline;
+          }
+        }
+
+        &:nth-child(n + 5) {
+          @media screen and (max-width: 580px) {
+            display: inline;
+          }
+        }
+
+        &:nth-child(n + 4) {
+          @include respond(460px) {
+            display: inline;
+          }
+        }
+
         svg {
           circle {
             transition: all 0.3s ease;
@@ -32,7 +95,7 @@
         &:hover {
           svg {
             circle {
-              fill: $color-accent;
+              fill: $color-active-regular;
               opacity: 1;
             }
           }
